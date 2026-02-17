@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__, template_folder='templates')
 app.secret_key = "your-secret-key-here"
 
-GEMINI_API_KEY = "AIzaSyD4OuyUUsUWEc1V6B4T3LEuUuNS8t0jtHE"
+GEMINI_API_KEY = "AIzaSyCvgHt5JZEusGHLr46XlXGJvVFLB7BhieI"
 GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
 
 @app.route("/")
@@ -61,4 +61,5 @@ def clear_chat():
     return jsonify({"status": "success"})
 
 if __name__ == "__main__":
+
     app.run(debug=True, port=5000)
